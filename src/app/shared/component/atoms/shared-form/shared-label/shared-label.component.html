@@ -1,0 +1,30 @@
+<ul>
+  <li *ngFor="let keyword of keywords | sortCompleted"
+      [ngClass]="{ 'completed-task': keyword.completed}">
+    <div (click)="onSelected(keyword)">
+      <shared-mat-checkbox
+        [keywords]="keyword"
+        [isChecked]="keyword.completed"
+        label="{{keyword.taskTitle}}"
+        color="primary">
+      </shared-mat-checkbox>
+    </div>
+    <div>
+      <button mat-icon-button aria-label="Remover Curso" (click)="onDelete(keyword)">
+        <mat-icon>delete</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Editar Curso" (click)="onEdit(keyword.taskId)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<!--<app-shared-label-->
+<!--  [color]="'primary'"-->
+<!--  [keywords]="tasks"-->
+<!--  (edit)="onEdit($event)"-->
+<!--  (remove)="onRemove($event)"-->
+<!--  (selected)="onSelected($event)">-->
+<!--</app-shared-label>-->

@@ -1,0 +1,48 @@
+ul {
+  min-height: 200px;
+  padding: 20px 20px 100px 20px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+
+  li div:first-child {
+    display: flex;
+    align-items: center;
+  }
+
+  li div:last-child {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding-bottom: 30px;
+
+  .addButton {
+    background-color: black;
+
+    span {
+      color: white;
+    }
+
+    mat-icon {
+      color: white;
+    }
+  }
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
+

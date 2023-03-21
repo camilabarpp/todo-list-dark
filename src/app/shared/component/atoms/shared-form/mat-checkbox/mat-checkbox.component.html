@@ -1,0 +1,21 @@
+<ng-container *ngIf="!!parentForm; else withoutParentForm">
+  <mat-checkbox
+    [ngClass]="{ 'completed-task': isChecked}"
+    class="p-0 m-0"
+    color="{{ color }}"
+    [formControl]="parentForm"
+    [checked]="isChecked">
+    <mat-label class="mat-body-1">{{ label }}</mat-label>
+    <mat-icon matSuffix *ngIf="!!icon" color="{{ color }}">{{ icon }}</mat-icon>
+  </mat-checkbox>
+</ng-container>
+
+<ng-template #withoutParentForm>
+  <mat-checkbox
+    [ngClass]="{ 'completed-task': isChecked}"
+    class="p-0 m-0"
+    color="{{ color }}"
+    [checked]="isChecked">
+    <mat-label class="mat-body-1">{{ label }}</mat-label>
+  </mat-checkbox>
+</ng-template>
