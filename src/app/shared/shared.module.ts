@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HeaderComponent} from './header/header.component';
+import {HeaderComponent} from './component/organisms/header/header.component';
 import {MatCheckboxComponent} from './component/atoms/shared-form/mat-checkbox/mat-checkbox.component';
 import {SharedFormDirective} from "./component/atoms/shared-form/mat-checkbox/shared-form.directive";
 import {MaterialModule} from "../material/material.module";

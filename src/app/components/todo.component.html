@@ -1,5 +1,11 @@
-<section>
+<section class="container-section">
   <app-header></app-header>
   <app-todo-body></app-todo-body>
+  <app-shared-label
+    [keywords]="tasks"
+    (edit)="onEdit($event)"
+    (remove)="onRemove($event)"
+    (selected)="onSelected($event)">
+  </app-shared-label>
 </section>
 
