@@ -20,6 +20,7 @@
 // hue. Available color palettes: https://material.io/design/color/
 $todo-list-dark-primary: mat.define-palette(color-palette.$custom-primary-color);
 $todo-list-dark-secondary: mat.define-palette(color-palette.$custom-secondary-color);
+$todo-list-dark-tertiary: mat.define-palette(color-palette.$custom-tertiary-color);
 $todo-list-dark-accent: mat.define-palette(color-palette.$custom-accent-color);
 $todo-list-dark-warn: mat.define-palette(color-palette.$custom-warn-color);
 $todo-list-dark-success: mat.define-palette(color-palette.$custom-success-color);
@@ -30,31 +31,54 @@ $todo-list-dark-theme: mat.define-light-theme((
   color: (
     primary: $todo-list-dark-primary,
     secondary: $todo-list-dark-secondary,
+    tertiary: $todo-list-dark-tertiary,
     accent: $todo-list-dark-accent,
     warn: $todo-list-dark-warn,
   ),
   typography: common.$todo-list-typography,
 ));
 
+$todo-list-dark-theme: common.apply-extra-colors($todo-list-dark-theme);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($todo-list-dark-theme);
-
+@include common.create-theme($todo-list-dark-theme);
 /* You can add global styles to this file, and also import other style files */
+* {
+  color: rgb(255 255 255);
+}
+
 
 html, body {
   height: 100%;
+  min-width: 375px;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.container-section {
-  min-width: 375px;
-  max-width: 834px;
-  margin: 0 5%;
+//@media only screen and (min-width: 1022px) {
+//  .container-section {
+//    padding: 0 30%;
+//  }
+//}
+//
+//@media only screen and (max-width: 1000px) and (min-width: 850px) {
+//  .container-section {
+//    padding: 0 10%;
+//  }
+//}
+//
+//@media only screen and (max-width: 850px) {
+//  .container-section {
+//    padding: 0 5%;
+//  }
+//}
+
+.bg-light-blue {
+  background: mat.get-color-from-palette($todo-list-dark-primary);
 }
 
-.bg-dark {
+.bg-dark-blue {
   background: mat.get-color-from-palette($todo-list-dark-secondary);
 }
 

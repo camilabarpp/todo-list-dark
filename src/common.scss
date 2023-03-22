@@ -39,7 +39,7 @@ $workshop-white: mat.define-palette(color-palette.$custom-white-color);
     color: (
       success: $workshop-success,
     ),
-          typography: $todo-listtypography,
+          typography: $todo-list-typography,
 
   ));
 }
@@ -47,7 +47,7 @@ $workshop-white: mat.define-palette(color-palette.$custom-white-color);
 // Mixin - um bloco de códigos CSS que serão executados sempre que chamado
 @mixin create-theme($workshop-theme) {
   @include mat.all-component-themes($workshop-theme);
-  @include mat.button-typography($todo-listr-typography);
+  @include mat.button-typography($todo-list-typography);
   // Set the default typography
   @include mat.all-component-typographies($todo-list-typography);
   @include mat.core();

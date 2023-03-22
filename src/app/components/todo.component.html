@@ -1,11 +1,9 @@
-<section class="container-section">
-  <app-header></app-header>
-  <app-todo-body></app-todo-body>
-  <app-shared-label
-    [keywords]="tasks"
-    (edit)="onEdit($event)"
-    (remove)="onRemove($event)"
-    (selected)="onSelected($event)">
-  </app-shared-label>
+<section class="mt-[20px]">
+  <h1 class="mat-headline-1 text-white mb-8 text-[#041955]">Olá, usuário!</h1>
+  <todo-category-section></todo-category-section>
+  <todo-body></todo-body>
+
 </section>
+
+
 

@@ -1,0 +1,17 @@
+<div>
+    <span class="mat-body-2 text-[#96b3fe]">
+      CATEGORIAS
+    </span>
+
+  <div class="py-4 w-full overflow-x-scroll">
+    <ul class="flex">
+      <li *ngFor="let category of categories">
+        <mat-card class="flex flex-col justify-between p-4 mr-4 w-[200px] lg:h-[135px] lg:w-[200px]">
+          <span class="mat-body-1 text-[#5d79c8] mb-0">40 tarefas</span>
+          <span class="mat-subtitle-1 text-white">{{category.categoryName}}</span>
+          <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </mat-card>
+      </li>
+    </ul>
+  </div>
+</div>

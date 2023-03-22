@@ -5,8 +5,7 @@
     color="{{ color }}"
     [formControl]="parentForm"
     [checked]="isChecked">
-    <mat-label class="mat-body-1">{{ label }}</mat-label>
-    <mat-icon matSuffix *ngIf="!!icon" color="{{ color }}">{{ icon }}</mat-icon>
+    <mat-label class="flex items-center mat-body-1 mb-0">{{ label }}</mat-label>
   </mat-checkbox>
 </ng-container>
 
@@ -16,6 +15,6 @@
     class="p-0 m-0"
     color="{{ color }}"
     [checked]="isChecked">
-    <mat-label class="mat-body-1">{{ label }}</mat-label>
+    <mat-label class="flex items-center mat-body-1 mb-0">{{ label }}</mat-label>
   </mat-checkbox>
 </ng-template>

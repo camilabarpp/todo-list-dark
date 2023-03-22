@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-list-dark';
+  public showSideNav!: boolean;
+
+  toggleSideNav(): void {
+    this.showSideNav = !this.showSideNav;
+    if (this.showSideNav) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
 }
