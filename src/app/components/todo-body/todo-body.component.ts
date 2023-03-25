@@ -9,51 +9,28 @@ export class TodoBodyComponent {
   tasks: any[] = [
     {
       id: 1,
-      taskTitle: 'Task 1',
-      description: 'Description 1',
+      taskTitle: 'Daily meeting with team',
       completed: true,
     },
     {
       id: 2,
-      taskTitle: 'Task 2',
-      description: 'Description 2',
+      taskTitle: 'Pay for rent',
       completed: false,
     },
     {
       id: 3,
-      taskTitle: 'Task 3',
-      description: 'Description 2',
+      taskTitle: 'Check emails',
       completed: true,
     },
     {
       id: 4,
-      taskTitle: 'Task 4',
-      description: 'Description 2',
+      taskTitle: 'Lunch with John',
       completed: false,
     },
     {
       id: 5,
-      taskTitle: 'Task 5',
-      description: 'Description 1',
+      taskTitle: 'Meditation at 6:00 AM',
       completed: true,
-    },
-    {
-      id: 6,
-      taskTitle: 'Task 6',
-      description: 'Description 2',
-      completed: false,
-    },
-    {
-      id: 7,
-      taskTitle: 'Task 7',
-      description: 'Description 2',
-      completed: true,
-    },
-    {
-      id: 8,
-      taskTitle: 'Task 8',
-      description: 'Description 2',
-      completed: false,
     }
   ]
 
@@ -68,5 +45,10 @@ export class TodoBodyComponent {
 
   onSelected($event: any) {
     console.log('onSelected', $event)
+  }
+
+  showBar(): void {
+    let slideSearch: HTMLElement = document.querySelector(".me-2") as HTMLElement;
+    slideSearch.style.display = "block";
   }
 }

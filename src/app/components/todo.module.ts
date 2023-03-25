@@ -8,14 +8,19 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MaterialModule} from "../material/material.module";
 import { TodoCategorySectionComponent } from './todo-category-section/todo-category-section.component';
+import { TodoSidenavComponent } from './todo-sidenav/todo-sidenav.component';
 
 @NgModule({
-  declarations: [
-    TodoComponent,
-    TodoBodyComponent,
-    TodoFormComponent,
-    TodoCategorySectionComponent
-  ],
+    declarations: [
+        TodoComponent,
+        TodoBodyComponent,
+        TodoFormComponent,
+        TodoCategorySectionComponent,
+        TodoSidenavComponent
+    ],
+    exports: [
+        TodoSidenavComponent
+    ],
     imports: [
         CommonModule,
         TodoRoutingModule,

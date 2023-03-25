@@ -1,0 +1,7 @@
+.form-control, .me-2 {
+  animation: slide 1s 1;
+}
+
+.me-2 {
+  display: none; /*Removed !important*/
+}

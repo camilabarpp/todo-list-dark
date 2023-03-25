@@ -9,6 +9,9 @@ import { SharedLabelComponent } from './component/atoms/shared-form/shared-label
 import {SortCompletedPipe} from "./component/atoms/shared-form/shared-label/pipe/sort-completed.pipe";
 import {SharedButtonComponent} from "./component/atoms/shared-button/shared-button.component";
 import {SharedDefaultComponentDirective} from "./component/atoms/shared-default-component.directive";
+import {
+  SharedFormFieldInputComponent
+} from "./component/atoms/shared-form/shared-input/shared-form-field-input.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import {SharedDefaultComponentDirective} from "./component/atoms/shared-default-
     SortCompletedPipe,
     SharedButtonComponent,
     SharedDefaultComponentDirective,
+    SharedFormFieldInputComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +34,7 @@ import {SharedDefaultComponentDirective} from "./component/atoms/shared-default-
     MatCheckboxComponent,
     SharedLabelComponent,
     SharedButtonComponent,
+    SharedFormFieldInputComponent,
   ]
 })
 export class SharedModule {

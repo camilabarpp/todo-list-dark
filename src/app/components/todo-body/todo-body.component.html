@@ -1,13 +1,15 @@
 <div class="my-[20px]">
-      <span class="mat-body-2 text-[#96b3fe]">
+
+
+    <span class="mat-body-2 text-[#96b3fe]">
       TAREFAS DE HOJE
     </span>
+    <shared-label
+      [color]="'secondary'"
+      [keywords]="tasks"
+      (edit)="onEdit($event)"
+      (remove)="onRemove($event)"
+      (selected)="onSelected($event)">
+    </shared-label>
 
-  <shared-label
-    [color]="'secondary'"
-    [keywords]="tasks"
-    (edit)="onEdit($event)"
-    (remove)="onRemove($event)"
-    (selected)="onSelected($event)">
-  </shared-label>
 </div>

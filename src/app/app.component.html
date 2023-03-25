@@ -1,11 +1,15 @@
 <mat-sidenav-container
-  (backdropClick)="toggleSideNav()"
   class="h-full lg:px-[30%] px-[5%] md:px-[10%] bg-light-blue container-section">
   <mat-sidenav
     mode="over"
     [(opened)]="showSideNav"
-    class="w-[100%] h-[100%] fixed bg-dark-blue flex flex-col justify-center">
-    <p (click)="toggleSideNav()">Teste</p>
+    class="w-full left-0 fixed bg-dark-blue flex flex-col justify-center">
+    <div>
+      <todo-sidenav
+      [showSideNav]="showSideNav"
+      (toggledSideNav)="toggleSideNav()"
+      ></todo-sidenav>
+    </div>
   </mat-sidenav>
 
   <mat-sidenav-content>
