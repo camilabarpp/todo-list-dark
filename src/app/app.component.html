@@ -17,13 +17,21 @@
 
   <mat-sidenav-content>
     <app-header (toggledSideNav)="toggleSideNav()"></app-header>
-    <shared-label
-      [color]="'secondary'"
-      [keywords]="currentTasks"
-      (edit)="onEdit($event)"
-      (remove)="onRemove($event)"
-      (selected)="onSelected($event)">
-    </shared-label>
-    <!--    <router-outlet></router-outlet>-->
+    <section class="mt-[20px]">
+      <h1 class="mat-headline-1 text-white mb-8 text-[#041955]">Olá, Gabriel!</h1>
+      <todo-category-section></todo-category-section>
+    </section>
+    <div class="my-[20px]">
+        <span class="mat-body-2 text-[#96b3fe]">
+          {{currentTaskName}}
+        </span>
+      <shared-label
+        [color]="'secondary'"
+        [keywords]="currentTasks"
+        (edit)="onEdit($event)"
+        (remove)="onRemove($event)"
+        (selected)="onSelected($event)">
+      </shared-label>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

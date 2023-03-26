@@ -1,12 +1,13 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public showSideNav!: boolean;
+  currentTaskName: string = '';
   currentTasks: any[] = []
   monthlyTasks: any[] = [
     {
@@ -55,14 +56,17 @@ export class AppComponent {
   }
 
   onMonthlyTasksSelected() {
+    this.currentTaskName = 'TAREFAS DO MÊS'
     this.currentTasks = this.monthlyTasks;
   }
 
   onWeeklyTasksSelected() {
+    this.currentTaskName = 'TAREFAS DA SEMANA'
     this.currentTasks = this.weeklyTasks;
   }
 
   onDailyTasksSelected() {
+    this.currentTaskName = 'TAREFAS DE HOJE'
     this.currentTasks = this.dailyTasks;
   }
 
@@ -77,5 +81,9 @@ export class AppComponent {
 
   onSelected($event: any) {
     console.log('onSelected', $event)
+  }
+
+  ngOnInit(): void {
+    this.onDailyTasksSelected()
   }
 }

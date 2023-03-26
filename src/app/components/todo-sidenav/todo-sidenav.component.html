@@ -23,21 +23,21 @@
         Categorias
       </button>
       <button
-        (click)="toggleSideNav()"
+        (click)="toggleSideNav(); onMonthlyTasksClick()"
         mat-basic-button
         class="flex text-lg mb-4">
         <mat-icon class="mr-4">calendar_month</mat-icon>
         Tarefas do mês
       </button>
       <button
-        (click)="toggleSideNav()"
+        (click)="toggleSideNav(); onWeeklyTasksClick()"
         mat-basic-button
         class="flex text-lg mb-4">
         <mat-icon class="mr-4">date_range</mat-icon>
         Tarefas da semana
       </button>
       <button
-        (click)="toggleSideNav()"
+        (click)="toggleSideNav(); onDailyTasksClick()"
         mat-basic-button
         class="flex text-lg mb-4">
         <mat-icon class="mr-4">event</mat-icon>
