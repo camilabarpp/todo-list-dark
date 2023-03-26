@@ -43,6 +43,36 @@ export class TodoComponent {
       id: 6,
       taskTitle: 'Buy fruits on supermarket',
       completed: false
+    },
+    {
+      id: 1,
+      taskTitle: 'Daily meeting with team',
+      completed: true,
+    },
+    {
+      id: 6,
+      taskTitle: 'Buy fruits on supermarket',
+      completed: false
+    },
+    {
+      id: 1,
+      taskTitle: 'Daily meeting with team',
+      completed: true,
+    },
+    {
+      id: 6,
+      taskTitle: 'Buy fruits on supermarket',
+      completed: false
+    },
+    {
+      id: 1,
+      taskTitle: 'Daily meeting with team',
+      completed: true,
+    },
+    {
+      id: 6,
+      taskTitle: 'Buy fruits on supermarket',
+      completed: false
     }
   ];
 
