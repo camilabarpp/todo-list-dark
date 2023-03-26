@@ -1,28 +1,38 @@
 <mat-sidenav-container
-  class="h-full  px-[5%] md:px-[10%] bg-light-blue container-section">
+  class="h-full px-[5%] sm:px-[10%] bg-light-blue container-section flex justify-center ">
   <mat-sidenav
     mode="push"
     [(opened)]="showSideNav"
     class="left-0 fixed flex flex-col justify-center">
-      <todo-sidenav
-        (monthlyTasksSelected)="onMonthlyTasksSelected()"
-        (weeklyTasksSelected)="onWeeklyTasksSelected()"
-        (dailyTasksSelected)="onDailyTasksSelected()"
-        [showSideNav]="showSideNav"
-        (toggledSideNav)="toggleSideNav()"
-      ></todo-sidenav>
+    <todo-sidenav
+      (monthlyTasksSelected)="onMonthlyTasksSelected()"
+      (weeklyTasksSelected)="onWeeklyTasksSelected()"
+      (dailyTasksSelected)="onDailyTasksSelected()"
+      [showSideNav]="showSideNav"
+      (toggledSideNav)="toggleSideNav()"
+    ></todo-sidenav>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content class="lg:w-[700px]">
     <app-header (toggledSideNav)="toggleSideNav()"></app-header>
     <section class="mt-[20px]">
       <h1 class="mat-headline-1 text-white mb-8 text-[#041955]">Olá, Gabriel!</h1>
       <todo-category-section></todo-category-section>
     </section>
     <div class="my-[20px]">
+      <div class="flex justify-between items-center">
         <span class="mat-body-2 text-[#96b3fe]">
           {{currentTaskName}}
         </span>
+
+        <app-shared-button
+          [color]="'accent'"
+          [icon]="'add'"
+          [text]="'Criar tarefa'"
+          [type]="'raised'"
+          class="hidden lg:block"
+        ></app-shared-button>
+      </div>
       <shared-label
         [color]="'secondary'"
         [keywords]="currentTasks"
@@ -31,7 +41,7 @@
         (selected)="onSelected($event)">
       </shared-label>
     </div>
-    <div class="fixed max-sm:bottom-4 max-sm:right-8 bottom-8 right-24">
+    <div class="fixed block lg:hidden max-sm:bottom-4 max-sm:right-8 bottom-8 right-24">
       <app-shared-button
         [color]="'accent'"
         [icon]="'add'"
