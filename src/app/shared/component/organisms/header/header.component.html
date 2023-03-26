@@ -1,3 +1,12 @@
-<section>
-<p class="mat-headline-1">Teste</p>
-</section>
+<mat-toolbar
+  class="bg-light-blue sticky flex items-center justify-between mt-5">
+  <app-shared-button
+    [icon]="'menu'"
+    [type]="'icon'"
+    color="none"
+    class="lg:hidden block text-black -mt-12 drop-shadow-none"
+    (click)="toggleSideNav()"
+  ></app-shared-button>
+  <img src="../../../../../assets/images/logo-todo.png" alt="Logotipo do Todo List" class="w-200px h-[100px]"/>
+
+</mat-toolbar>

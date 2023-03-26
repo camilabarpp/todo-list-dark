@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoBodyComponent } from './todo-body.component';
+import { TodoSidenavComponent } from './todo-sidenav.component';
 
-describe('TodoBodyComponent', () => {
-  let component: TodoBodyComponent;
-  let fixture: ComponentFixture<TodoBodyComponent>;
+describe('TodoSectionComponent', () => {
+  let component: TodoSidenavComponent;
+  let fixture: ComponentFixture<TodoSidenavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TodoBodyComponent ]
+      declarations: [ TodoSidenavComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TodoBodyComponent);
+    fixture = TestBed.createComponent(TodoSidenavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

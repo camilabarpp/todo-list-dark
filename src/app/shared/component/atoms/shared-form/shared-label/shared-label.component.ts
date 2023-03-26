@@ -5,11 +5,12 @@ import {SharedFormModel} from "../common/shared-form-model";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-shared-label',
+  selector: 'shared-label',
   templateUrl: './shared-label.component.html',
   styleUrls: ['./shared-label.component.scss']
 })
 export class SharedLabelComponent extends SharedDefaultComponentDirective {
+  hoverIndex: number | undefined;
   @Input() parentForm: FormControl | undefined;
   @Input() keywords: SharedFormModel[] = [];
   @Output() outputValue = new EventEmitter<any | SharedFormModel>();
@@ -36,4 +37,11 @@ export class SharedLabelComponent extends SharedDefaultComponentDirective {
     this.selected.emit(taskModel);
   }
 
+  public enter(i : number) {
+    this.hoverIndex = i;
+  }
+
+  public leave() {
+    this.hoverIndex = undefined;
+  }
 }

@@ -1,0 +1,12 @@
+.mat-mdc-card {
+  background-color: #041955;
+  border-radius: 12px;
+}
+
+:host ::ng-deep .mdc-linear-progress__bar-inner {
+  border-color: #eb06ff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}

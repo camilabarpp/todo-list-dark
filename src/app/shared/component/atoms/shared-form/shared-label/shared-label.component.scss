@@ -1,24 +1,11 @@
 ul {
-  min-height: 200px;
-  padding: 20px 20px 100px 20px;
-
   li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin: 10px 0;
-    border-radius: 10px;
-  }
-
-  li div:first-child {
-    display: flex;
-    align-items: center;
-  }
-
-  li div:last-child {
-    display: flex;
-    align-items: center;
+    border-radius: 12px;
   }
 }
 
@@ -42,7 +29,8 @@ ul {
   }
 }
 
-.completed-task {
-  text-decoration: line-through;
+:host ::ng-deep mat-checkbox .mat-accent .mat-mdc-checkbox-background {
+  background-color: #eb06ff;
 }
+
 
