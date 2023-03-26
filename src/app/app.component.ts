@@ -7,6 +7,43 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   public showSideNav!: boolean;
+  currentTasks: any[] = []
+  monthlyTasks: any[] = [
+    {
+      id: 4,
+      taskTitle: 'Lunch with John',
+      completed: false,
+    },
+    {
+      id: 5,
+      taskTitle: 'Meditation at 6:00 AM',
+      completed: true,
+    }
+  ];
+  weeklyTasks: any[] = [
+    {
+      id: 2,
+      taskTitle: 'Pay for rent',
+      completed: false,
+    },
+    {
+      id: 3,
+      taskTitle: 'Check emails',
+      completed: true,
+    },
+  ];
+  dailyTasks: any[] = [
+    {
+      id: 1,
+      taskTitle: 'Daily meeting with team',
+      completed: true,
+    },
+    {
+      id: 6,
+      taskTitle: 'Buy fruits on supermarket',
+      completed: false
+    }
+  ];
 
   toggleSideNav(): void {
     this.showSideNav = !this.showSideNav;
@@ -15,5 +52,30 @@ export class AppComponent {
     } else {
       document.body.style.overflow = 'auto';
     }
+  }
+
+  onMonthlyTasksSelected() {
+    this.currentTasks = this.monthlyTasks;
+  }
+
+  onWeeklyTasksSelected() {
+    this.currentTasks = this.weeklyTasks;
+  }
+
+  onDailyTasksSelected() {
+    this.currentTasks = this.dailyTasks;
+  }
+
+  onEdit($event: any) {
+    console.log('onEdit', $event)
+
+  }
+
+  onRemove($event: any) {
+    console.log('onRemove', $event)
+  }
+
+  onSelected($event: any) {
+    console.log('onSelected', $event)
   }
 }

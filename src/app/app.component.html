@@ -6,14 +6,24 @@
     class="w-full left-0 fixed bg-dark-blue flex flex-col justify-center">
     <div>
       <todo-sidenav
-      [showSideNav]="showSideNav"
-      (toggledSideNav)="toggleSideNav()"
+        (monthlyTasksSelected)="onMonthlyTasksSelected()"
+        (weeklyTasksSelected)="onWeeklyTasksSelected()"
+        (dailyTasksSelected)="onDailyTasksSelected()"
+        [showSideNav]="showSideNav"
+        (toggledSideNav)="toggleSideNav()"
       ></todo-sidenav>
     </div>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <app-header (toggledSideNav)="toggleSideNav()"></app-header>
-    <router-outlet></router-outlet>
+    <shared-label
+      [color]="'secondary'"
+      [keywords]="currentTasks"
+      (edit)="onEdit($event)"
+      (remove)="onRemove($event)"
+      (selected)="onSelected($event)">
+    </shared-label>
+    <!--    <router-outlet></router-outlet>-->
   </mat-sidenav-content>
 </mat-sidenav-container>
