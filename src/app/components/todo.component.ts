@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent {
-  public showSideNav!: boolean;
+  // public showSideNav!: boolean;
   currentTaskName: string = '';
   currentTasks: any[] = []
   monthlyTasks: any[] = [
@@ -76,14 +76,14 @@ export class TodoComponent {
     }
   ];
 
-  toggleSideNav(): void {
-    this.showSideNav = !this.showSideNav;
-    if (this.showSideNav) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }
+  // toggleSideNav(): void {
+  //   this.showSideNav = !this.showSideNav;
+  //   if (this.showSideNav) {
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     document.body.style.overflow = 'auto';
+  //   }
+  // }
 
   onMonthlyTasksSelected() {
     this.currentTaskName = 'TAREFAS DO MÊS'

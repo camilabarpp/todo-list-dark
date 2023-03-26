@@ -12,6 +12,7 @@ import {SharedDefaultComponentDirective} from "./component/atoms/shared-default-
 import {
   SharedFormFieldInputComponent
 } from "./component/atoms/shared-form/shared-input/shared-form-field-input.component";
+import {RouterLink} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import {
     SharedDefaultComponentDirective,
     SharedFormFieldInputComponent
   ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        CommonModule,
+        MaterialModule,
+        ReactiveFormsModule,
+        RouterLink
+    ],
   exports: [
     HeaderComponent,
     MatCheckboxComponent,
