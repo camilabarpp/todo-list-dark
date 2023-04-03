@@ -5,7 +5,7 @@ import {MatCheckboxComponent} from './component/atoms/shared-form/mat-checkbox/m
 import {SharedFormDirective} from "./component/atoms/shared-form/mat-checkbox/shared-form.directive";
 import {MaterialModule} from "../material/material.module";
 import {ReactiveFormsModule} from "@angular/forms";
-import { SharedLabelComponent } from './component/atoms/shared-form/shared-label/shared-label.component';
+import {SharedLabelComponent} from './component/atoms/shared-form/shared-label/shared-label.component';
 import {SortCompletedPipe} from "./component/atoms/shared-form/shared-label/pipe/sort-completed.pipe";
 import {SharedButtonComponent} from "./component/atoms/shared-button/shared-button.component";
 import {SharedDefaultComponentDirective} from "./component/atoms/shared-default-component.directive";
@@ -23,14 +23,14 @@ import {RouterLink} from "@angular/router";
     SortCompletedPipe,
     SharedButtonComponent,
     SharedDefaultComponentDirective,
-    SharedFormFieldInputComponent
+    SharedFormFieldInputComponent,
   ],
-    imports: [
-        CommonModule,
-        MaterialModule,
-        ReactiveFormsModule,
-        RouterLink
-    ],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    RouterLink
+  ],
   exports: [
     HeaderComponent,
     MatCheckboxComponent,

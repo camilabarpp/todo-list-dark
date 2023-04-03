@@ -1,0 +1,16 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 10px;
+}
+
+.card-form {
+  padding: 2rem;
+}
+
+::ng-deep .mdc-notched-outline__notch {
+  border-right: none !important;
+}
+

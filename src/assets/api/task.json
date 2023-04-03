@@ -1,0 +1,48 @@
+{
+  "task": [
+    {
+      "taskId": 1,
+      "taskTitle": "Comer frutas",
+      "description": "Comer uma fruta por dia",
+      "category": {
+        "categoryId": 1,
+        "categoryName": "Saúde"
+      },
+      "dueDate": "2023-04-20",
+      "completed": false
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Caminhar",
+      "description": "Caminhar 1.5km",
+      "category": {
+        "categoryId": 2,
+        "categoryName": "Sem categoria"
+      },
+      "dueDate": "2023-04-13",
+      "completed": false
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Estudar",
+      "description": "Estudar 1 hora",
+      "category": {
+        "categoryId": 2,
+        "categoryName": "Sem categoria"
+      },
+      "dueDate": "2023-04-25",
+      "completed": false
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Reunião as 10h",
+      "description": "Reunião com o chefe",
+      "category": {
+        "categoryId": 3,
+        "categoryName": "Trabalho"
+      },
+      "dueDate": "2023-04-11",
+      "completed": false
+    }
+  ]
+}

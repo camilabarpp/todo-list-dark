@@ -45,9 +45,7 @@ $todo-list-dark-theme: common.apply-extra-colors($todo-list-dark-theme);
 // that you are using.
 @include common.create-theme($todo-list-dark-theme);
 /* You can add global styles to this file, and also import other style files */
-* {
-  color: rgb(255 255 255);
-}
+* {}
 
 html, body {
   height: 100%;

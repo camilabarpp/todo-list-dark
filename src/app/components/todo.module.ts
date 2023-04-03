@@ -8,13 +8,18 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MaterialModule} from "../material/material.module";
 import {TodoCategorySectionComponent} from './todo-category-section/todo-category-section.component';
 import {TodoSidenavComponent} from './todo-sidenav/todo-sidenav.component';
+import {
+  SharedFormFieldDateComponent
+} from "../shared/component/atoms/shared-form/shared-form-field-date/shared-form-field-date.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     TodoComponent,
     TodoFormComponent,
     TodoCategorySectionComponent,
-    TodoSidenavComponent
+    TodoSidenavComponent,
+    SharedFormFieldDateComponent
   ],
   exports: [
     TodoSidenavComponent,
@@ -26,6 +31,7 @@ import {TodoSidenavComponent} from './todo-sidenav/todo-sidenav.component';
     SharedModule,
     MatSidenavModule,
     MaterialModule,
+    ReactiveFormsModule,
   ]
 })
 export class TodoModule {
