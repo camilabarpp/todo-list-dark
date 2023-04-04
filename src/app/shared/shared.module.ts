@@ -31,13 +31,14 @@ import {RouterLink} from "@angular/router";
     ReactiveFormsModule,
     RouterLink
   ],
-  exports: [
-    HeaderComponent,
-    MatCheckboxComponent,
-    SharedLabelComponent,
-    SharedButtonComponent,
-    SharedFormFieldInputComponent,
-  ]
+    exports: [
+        HeaderComponent,
+        MatCheckboxComponent,
+        SharedLabelComponent,
+        SharedButtonComponent,
+        SharedFormFieldInputComponent,
+        SortCompletedPipe,
+    ]
 })
 export class SharedModule {
 }

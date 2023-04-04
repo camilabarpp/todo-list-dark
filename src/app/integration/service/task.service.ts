@@ -8,7 +8,8 @@ import {Task} from "./task-model";
 })
 export class TaskService {
 
-  private API: string = 'assets/api/task.json';
+  private API: string = 'api/v2/tasks';
+  // private API: string = 'assets/api/task.json';
 
   constructor(private _http: HttpClient) { }
 

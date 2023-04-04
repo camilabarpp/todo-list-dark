@@ -3,6 +3,7 @@ import {SharedDefaultComponentDirective} from "../../shared-default-component.di
 import {FormControl} from "@angular/forms";
 import {SharedFormModel} from "../common/shared-form-model";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Task} from "../../../../../integration/service/task-model";
 
 @Component({
   selector: 'shared-label',
@@ -12,7 +13,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class SharedLabelComponent extends SharedDefaultComponentDirective {
   hoverIndex: number | undefined;
   @Input() parentForm: FormControl | undefined;
-  @Input() keywords: SharedFormModel[] = [];
+  @Input() tasks: Task[] = [];
   @Output() outputValue = new EventEmitter<any | SharedFormModel>();
   @Output() edit = new EventEmitter(false);
   @Output() remove = new EventEmitter(false);

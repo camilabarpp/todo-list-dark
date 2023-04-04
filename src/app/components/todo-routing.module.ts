@@ -8,10 +8,10 @@ const routes = [
     path: '',
     component: TodoComponent,
   },
-  // {
-  //   path: 'edit/:id',
-  //   component: TodoFormComponent,
-  // },
+  {
+    path: 'edit/:id',
+    component: TodoFormComponent,
+  },
   {
     path: 'add',
     component: TodoFormComponent,
