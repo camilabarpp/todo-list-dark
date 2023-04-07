@@ -18,7 +18,7 @@
 <section class="mt-[20px]" *ngIf="tasks$ | async as tasks">
   <h1 class="mat-headline-1 text-white mb-8 text-[#041955]">Olá, Gabriel!</h1>
   <todo-category-section></todo-category-section>
-  <div class="my-[20px]" *ngFor="let task of tasks">
+  <div class="my-[20px]">
     <div class="flex justify-between items-center">
         <span class="mat-body-2 text-[#96b3fe]">
           {{currentTasks}}
