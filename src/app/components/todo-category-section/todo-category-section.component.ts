@@ -19,18 +19,6 @@ export class TodoCategorySectionComponent {
     {
       categoryId: 3,
       categoryName: 'Mercado',
-    },
-    {
-      categoryId: 4,
-      categoryName: 'Saúde',
-    },
-    {
-      categoryId: 5,
-      categoryName: 'Pet',
-    },
-    {
-      categoryId: 6,
-      categoryName: 'Viagem',
     }
   ]
 

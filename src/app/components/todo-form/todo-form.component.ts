@@ -15,6 +15,7 @@ export class TodoFormComponent {
   task$?: Observable<Task[] | undefined>;
   subs: Subscription[] = [];
   initialFormValues!: any;
+  taskId!: string;
 
   form = this.fb.group({
     taskId: new FormControl(),
@@ -44,13 +45,14 @@ export class TodoFormComponent {
     this.task$.subscribe((data: any) => {
       console.log(data);
     });
-    const id: number = this.route.snapshot.params['id'];
+    this.taskId = this.route.snapshot.params['id'];
+    this.initializeValues();
   }
 
   initializeValues(): void {
     this.subs.push(
       this._taskService
-        .getTaskById(this._id)
+        .getTaskById(this.taskId)
         .pipe(
           filter((value) => !!value),
           map((value) => value as Task),
